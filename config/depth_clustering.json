@@ -1,0 +1,28 @@
+{
+    "depth_clustering": {
+        "distance_clustering": 5,
+        "score_clustering": 1,
+        "angle_clustering": 10,
+        "angle_ground_removal": 10,
+        "size_cluster_min": 1,
+        "size_cluster_max": 50000,
+        "size_smooth_window": 0,
+        "use_camera_fov": false,
+        "use_score_filter": false,
+        "score_filter_threshold": 0,
+        "score_type_point": "type_1",
+        "score_type_cluster": "type_1",
+        "score_type_frame": "type_1",
+        "bounding_box_type": "cube",
+        "difference_type": "angles_precomputed",
+        "ground_truth_cube_file_name": "top_views/top_view_coverage_FN.json",
+        "ground_truth_flat_file_name": "none"
+    },
+    "logger": {
+        "log_path": "./",
+        "log_file_name_cube": "depth_clustering_detection_cube.json",
+        "log_file_name_polygon": "depth_clustering_detection_polygon.json",
+        "log_file_name_flat": "depth_clustering_detection_flat.json",
+        "log": true
+    }
+}
