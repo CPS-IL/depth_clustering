@@ -8,8 +8,8 @@
  depth_clustering: a fast library to segment Velodyne clouds.
  Copyright (C) 2018  I. Bogoslavskyi, C. Stachniss, University of Bonn
 
- Copyright (c) 2023 Simon Yu, Ayoosh Bansal, Cyber-Physical Systems Integration Lab,
- Univeristy of Illinois Urbana-Champaign.  All rights reserved.
+ Copyright 2023 University of Illinois Board of Trustees. All Rights Reserved.
+ Developers: Simon Yu, Ayoosh Bansal; Cyber-Physical Systems Integration Lab
 
                             Preamble
 
