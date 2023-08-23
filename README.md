@@ -1,9 +1,8 @@
-This repository was forked from [https://github.com/PRBonn/depth_clustering](https://github.com/PRBonn/depth_clustering).
 
-For usage instructions refer to [https://github.com/CPS-IL/perception_simplex](https://github.com/CPS-IL/perception_simplex).
+This repository was forked from [PRBonn/depth_clustering](https://github.com/PRBonn/depth_clustering) for the evaluation of [Perception Simplex](https://github.com/CPS-IL/perception_simplex), please refer to the usage instructions at [Perception Simplex](https://github.com/CPS-IL/perception_simplex). The engineering version, uploaded and maintained by Simon Yu, is also [available](https://github.com/cpsintegrationlab/depth_clustering).
 
-Original ReadMe follows.
-
+---
+The original ReadMe follows:
 
 # Depth Clustering #
 
