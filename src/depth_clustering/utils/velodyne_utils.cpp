@@ -128,7 +128,12 @@ MatFromPNGCamera(const string& path)
 		return cv::Mat();
 	}
 
+#if CV_MAJOR_VERSION >= 3
+	cv::Mat image_camera = cv::imread(path, cv::IMREAD_COLOR);
+#else
 	cv::Mat image_camera = cv::imread(path, CV_LOAD_IMAGE_COLOR);
+#endif
+
 	cv::cvtColor(image_camera, image_camera, cv::COLOR_BGR2RGB);
 
 	return image_camera;
@@ -142,7 +147,12 @@ MatFromPNGRange(const string& path, std::shared_ptr<ProjectionParams> projection
 		return cv::Mat();
 	}
 
+#if CV_MAJOR_VERSION >= 3
+	cv::Mat image_range = cv::imread(path, cv::IMREAD_ANYDEPTH);
+#else
 	cv::Mat image_range = cv::imread(path, CV_LOAD_IMAGE_ANYDEPTH);
+#endif
+
 	image_range.convertTo(image_range, CV_32F);
 	image_range /= 500.0;
 
@@ -185,7 +195,12 @@ MatFromTIFFRange(const string& path, std::shared_ptr<ProjectionParams> projectio
 		return cv::Mat();
 	}
 
+#if CV_MAJOR_VERSION >= 3
+	cv::Mat image_range = cv::imread(path, cv::IMREAD_ANYDEPTH);
+#else
 	cv::Mat image_range = cv::imread(path, CV_LOAD_IMAGE_ANYDEPTH);
+#endif
+
 	image_range.convertTo(image_range, CV_32F);
 	image_range /= 65535.0;
 	image_range *= 75.0;
@@ -201,7 +216,12 @@ MatFromTIFFIntensity(const string& path, std::shared_ptr<ProjectionParams> proje
 		return cv::Mat();
 	}
 
+#if CV_MAJOR_VERSION >= 3
+	cv::Mat image_intensity = cv::imread(path, cv::IMREAD_ANYDEPTH);
+#else
 	cv::Mat image_intensity = cv::imread(path, CV_LOAD_IMAGE_ANYDEPTH);
+#endif
+
 	image_intensity.convertTo(image_intensity, CV_32F);
 	image_intensity /= 65535.0;
 	image_intensity *= projection_parameter->getProjectionParamsRaw()->intensity_norm_factor;
@@ -217,7 +237,12 @@ MatFromTIFFElongation(const string& path, std::shared_ptr<ProjectionParams> proj
 		return cv::Mat();
 	}
 
+#if CV_MAJOR_VERSION >= 3
+	cv::Mat image_elongation = cv::imread(path, cv::IMREAD_ANYDEPTH);
+#else
 	cv::Mat image_elongation = cv::imread(path, CV_LOAD_IMAGE_ANYDEPTH);
+#endif
+
 	image_elongation.convertTo(image_elongation, CV_32F);
 	image_elongation /= 65535.0;
 	image_elongation *= projection_parameter->getProjectionParamsRaw()->elongation_norm_factor;
