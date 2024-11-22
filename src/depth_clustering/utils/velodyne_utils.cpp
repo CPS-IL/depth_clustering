@@ -203,7 +203,7 @@ MatFromTIFFRange(const string& path, std::shared_ptr<ProjectionParams> projectio
 
 	image_range.convertTo(image_range, CV_32F);
 	image_range /= 65535.0;
-	image_range *= 75.0;
+	image_range *= 100.0;
 
 	return LimitHorizontalFieldOfView(image_range, projection_parameter);
 }
